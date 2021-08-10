@@ -5,5 +5,5 @@ from . import views
 app_name =  "it_english"
 
 urlpatterns = [
-    path("admin/",admin.site.urls),
+    path('', views.index, name='index'),
 ]
