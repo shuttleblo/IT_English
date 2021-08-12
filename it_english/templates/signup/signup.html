@@ -1,0 +1,22 @@
+{% extends "signup/base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="wrapper">
+    <div class="container">
+        <div class="welcome">
+            <h2 style="text-align:center">welcome to</h2>
+            <h1 style="text-align:center">IT　English</h1>
+        </div>
+        <div class="entry">
+            <h1 class="signup" style="text-align:center">Sign up</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">登録</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
