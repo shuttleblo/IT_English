@@ -130,4 +130,4 @@ dmypy.json
 
 # .vscode
 .vscode
-./config/local_setting.py
+./config/secret_setting.py

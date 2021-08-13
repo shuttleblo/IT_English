@@ -1,4 +1,4 @@
-SECRET_KEY = 'f3dzplk75ku8li5q8puniik3!r=8vo*g8==icd7qox1yr83%xw'
+SECRET_KEY = '7%9v2ht&k4z8@+t0*k07mam5qt6hqjw@8)+kav2s*o7o%g*dm#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
