@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 # .vscode
-.vscode./config/local_setting.py
+.vscode
+./config/local_setting.py
