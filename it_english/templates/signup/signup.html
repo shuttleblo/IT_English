@@ -7,14 +7,12 @@
 {% block body %}
     <div class="container">
         <div class="greeting mt-1">
-            <p class="welcome" style="text-align:center">welcome to</p>
+            <p class="welcome" style="text-align:center">Welcome to</p>
             <p class="itenglish" style="text-align:center">IT English</p>
         </div>
 
         <div class="input w-50 text-center">
-            {% comment %} <p class="signup pb-2" style="text-align:center">Sign up</p> {% endcomment %}
             <div class="input-child">
-                
                 <form method="post" action="" class="form-group row justify-content-center">
                     {% csrf_token %}
                     {% for item in form %}
