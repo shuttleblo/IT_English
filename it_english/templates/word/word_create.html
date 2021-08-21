@@ -1,0 +1,17 @@
+{% extends "word/base.html" %}
+{% load static %}
+
+{% block header %}
+<strong class="top_title">問題作成</strong>
+{% endblock %}
+
+{% block body %}
+<form action="" method="POST">{% csrf_token %}
+  {{ form.as_p }}
+
+<input type="submit" value="create">
+
+
+</form>
+
+{% endblock %}
