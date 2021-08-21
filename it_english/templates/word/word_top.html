@@ -1,0 +1,39 @@
+{% extends "word/base.html" %}
+{% load static %}
+
+
+{% block header %}
+<strong class="top_title">単語リスト</strong>
+{% endblock %}
+{% block body %}
+
+<div　class='flash_notice'>
+  flash_notice追加予定
+</div>
+<div class='seach'>
+  検索<i class="fas fa-search"></i>
+</div>
+
+<div>新規作成はこちら</div>
+
+<table>
+<tr>
+<th>単語</th>
+<th>解答</th>
+<th>編集</th>
+<th>削除</th>
+</tr>
+
+{% for list in lists %}
+<tr>
+  <td>{{ list.word }}</td>
+  <td>{{ list.answer }}</td>
+  <td><a href="{% url 'edit' list.pk %}" class="btn btn-primary btn-lg active" role="button" aria-disabled="true"><i class="fas fa-pencil-alt"></i></a></td>
+  <td><a href="{% url 'create' list.pk %}" class="btn btn-success btn-lg active" role="button" aria-disabled="true"><i class="fas fa-trash"></i></a></td>
+
+</tr>
+{% endfor %}
+</table>
+
+
+{% endblock %}

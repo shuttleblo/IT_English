@@ -21,3 +21,14 @@ def signup(request):
         "form": form
     }
     return render(request, 'signup/signup.html', context)
+
+def word_top(request):
+    return render(request, 'word/word_top.html',{})
+
+
+def word_create(request):
+    return render(request, 'word/word_create.html',{})
+
+
+def word_edit(request):
+    return render(request, 'word/word_edit.html',{})

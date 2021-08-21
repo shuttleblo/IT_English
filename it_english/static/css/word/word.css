@@ -1,0 +1,38 @@
+header{
+  background-color: #A3A387;
+  width: auto;
+  height: 150px;
+
+}
+
+.top_title{
+  float: left;
+  margin: 25px 100px;
+  font-size: 64px;
+
+}
+
+.My_page{
+  float: right;
+  margin:50px 50px;
+  font-size: 28px;
+}
+
+.logout{
+  float: right;
+  margin: 50px 50px;
+  font-size: 28px;
+}
+body {
+  background-color: #F0F0E0;
+}
+
+.flash_notice{
+  width: 100%;
+  text-align: center;
+
+}
+.edit_button{
+  font-size: 64px;
+  width: 150px;
+}
