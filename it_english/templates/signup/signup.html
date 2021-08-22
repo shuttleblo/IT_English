@@ -2,29 +2,30 @@
 
 {% block body %}
     <div class="container">
-        <div class="greeting mt-1">
-            <p class="welcome" style="text-align:center">Welcome to</p>
-            <p class="itenglish" style="text-align:center">IT English</p>
-        </div>
+        <div class="inner">
+            <div class="greeting mt-1">
+                <p class="welcome" style="text-align:center">Welcome to</p>
+                <p class="itenglish" style="text-align:center">IT English</p>
+            </div>
 
-        <div class="input w-50 text-center">
-            <div class="input-child">
-                <form method="post" action="" class="form-group row justify-content-center">
-                    {% csrf_token %}
-                    {% for item in form %}
-                        <div class="form-group col-sm-8 m-3">
-                            <label for="{{item.id_for_label}}">{{item.label}}</label>
-                            <input 
-                                type="{{item.field.widget.input_type}}"
-                                placeholder="{{item.label}}"
-                                class="form-control p-2" 
-                                {% if item.field.required %}required{% endif %} 
-                                name="{{item.name}}" 
-                                id="{{item.id_for_label}}">
-                        </div>
-                    {% endfor %}
-                    <button type="submit" class="submit btn btn-primary w-50 m-3">Create your account</button>
-                </form>
+            <div class="input text-center">
+                <div class="input-child">
+                    <form method="post" action="" class="form-group row justify-content-center">
+                        {% csrf_token %}
+                        {% for item in form %}
+                            <div class="form-group col-sm-8 m-3">
+                                <input 
+                                    type="{{item.field.widget.input_type}}"
+                                    placeholder="{{item.label}}"
+                                    class="form-control p-3" 
+                                    {% if item.field.required %}required{% endif %} 
+                                    name="{{item.name}}" 
+                                    id="{{item.id_for_label}}">
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="submit btn btn-primary w-50 m-3">Create your account</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
