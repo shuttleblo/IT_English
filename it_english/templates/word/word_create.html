@@ -6,12 +6,28 @@
 {% endblock %}
 
 {% block body %}
-<form action="" method="POST">{% csrf_token %}
-  {{ form.as_p }}
 
-<input type="submit" value="create">
+<div class="top_reverse">
+  <a href="#">単語リストへ戻る<i class="fas fa-undo-alt"></i></a>
+    </div>
+<div class="create_container">
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
 
+  <p class="create_form">英単語</p>
+  <input type="text"class="create_formbox"  value="編集前の単語" name="英単語"></p>
 
-</form>
+  <p class="create_form">解答</p>
+  <input type="text" class="create_formbox" value="編集前の単語" name="解答"></p>
+  <p class="create_form">選択肢A</p>
+  <input type="text" class="create_formbox" value="編集前の単語" name="選択肢A"></p>
+  <p class="create_form">選択肢B</p>
+  <input type="text" class="create_formbox" value="編集前の単語" name="選択肢B"></p>
+  <p class="create_form">選択肢C</p>
+  <input type="text" class="create_formbox" value="編集前の単語" name="選択肢C"></p>
+
+    <input type="submit" value="新規作成">
+  </form>
+</div>
+
 
 {% endblock %}
