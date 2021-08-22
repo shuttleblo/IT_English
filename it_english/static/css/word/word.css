@@ -73,3 +73,28 @@ table{
 .answer{
   width:350px;
 }
+
+.top_reverse{
+  text-align: right;
+  margin: 20px;
+  height: 30px;
+  width: 90%;
+}
+
+.edit_container{
+  width: 100%;
+  text-align: center;
+  margin: 40px 80px;
+}
+
+.edit_form{
+  margin:10px;
+  font-size: 24px;
+
+
+}
+
+.edit_formbox{
+  color: gray;
+  font-size: 24px;
+}
