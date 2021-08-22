@@ -1,0 +1,28 @@
+{% extends "../signup/base.html" %}
+{% load static %}
+{% block body %}
+
+  <!-- {% if user.id  %}
+  <p>ログインしました．</p>
+  <p>こんにちは，{{ user.username }}さん</p>
+  <a href="{% url 'logout' %}">ログアウトする</a>
+  {% else %}
+  <a href="{% url 'login' %}">ログイン</a>
+  <a href="{% url 'create_account' %}">アカウント作成</a>
+  {% endif %} -->
+
+  {% if form.errors %}
+  <p>ユーザーID, パスワードが一致しません</p>
+  {%endif%}
+  <form method="POST" action="{%url 'login'%}">
+    {%csrf_token%}
+    <label >ユーザーID</label>
+    {{form.username}}
+    {{form.username.errors}}
+    <label >パスワード</label>
+    {{form.password}}
+    {{form.password.errors}}
+    <button type="submit">ログイン</button>
+  </form>
+
+{% endblock %}
