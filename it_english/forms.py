@@ -8,10 +8,11 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("username", "password1", "password2")
-        help_texts = {
-            'username': None,
-            'password1': None,
-        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs["class"] = "form-control"
 
 
 class LoginForm(AuthenticationForm):
