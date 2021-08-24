@@ -1,0 +1,42 @@
+{% extends "login/base.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+  <div class="title row">
+    <p class="text-center">Let's Get Started Now!!</p>
+  </div>
+  {% if form.errors %}
+    <p class="text-center">ユーザーID, パスワードが一致しません</p>
+  {% endif %}
+
+  <div class="form row">
+<div class="img">
+  <!-- <img src="{% static './img/undraw_exams.svg' %}" alt="img"> -->
+</div>
+    <form method="POST" action="{%url 'login'%}">
+      {% csrf_token %}
+      <div class="user">
+      <label >ユーザーID</label>
+
+        {{ form.username }}
+        {{ form.username.errors }}
+      </div>
+      
+      <div class="password">
+      <label >パスワード</label>
+        {{ form.password }}
+        {{ form.password.errors }}
+      </div>
+      <div class="text-center">
+
+        <button type="submit" class="btn btn--shadow">Sign In</button>
+      </div>
+      </form>
+    <p class="create text-center"><a href="../signup">Create an Account</a></p>
+    <p class="forget text-center"><a href="#">Forget Password?</a></p>
+  </div>
+</div>
+  
+{% endblock %}
