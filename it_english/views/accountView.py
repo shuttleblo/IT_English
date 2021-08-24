@@ -23,9 +23,6 @@ def signup(request):
     context = {
         "form": form
     }
-<<<<<<< HEAD
-    return render(request, 'signup/signup.html', context)
-=======
     return render(request, 'signup/signup.html', context)
 
 
@@ -45,4 +42,3 @@ class Account_login(View):
 
 
 account_login = Account_login.as_view()
->>>>>>> 8a35da390b365aad34ad2ee0380dfe96c960b53a
