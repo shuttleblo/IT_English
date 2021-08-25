@@ -19,6 +19,10 @@ p {
   padding: 40px 200px;
 }
 
+.error {
+  color: red;
+}
+
 .user,
 .password {
   margin: 30px auto;

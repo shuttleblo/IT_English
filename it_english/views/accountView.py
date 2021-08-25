@@ -33,7 +33,7 @@ class Account_login(View):
             username = form.cleaned_data.get('username')
             user = User.objects.get(username=username)
             login(request, user)
-            return redirect('it_english:index')
+            return redirect('../templates/question/q_answer.html')
         return render(request, 'login/login.html', {'form': form, })
 
     def get(self, request, *args, **kwargs):
