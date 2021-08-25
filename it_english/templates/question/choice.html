@@ -1,0 +1,25 @@
+{% extends "question/base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/question/choice.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="inner">
+        <h1>問題数を選んでください。</h1>
+        <div class="choice">
+                <div class="animation">
+                    <div class="effect"></div>
+                    <a href="#"> 10問 </a>
+                </div>
+                <div class="animation">
+                    <div class="effect"></div>
+                    <a href="#"> 50問 </a>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
