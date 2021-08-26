@@ -1,43 +1,41 @@
-{% extends "login/base.html" %}
+{% extends "login/base.html" %} {% load static %} {% block body %}
 
-{% load static %}
-
-{% block body %}
 <div class="container">
   <div class="title row">
     <p class="text-center">Let's Get Started Now!!</p>
   </div>
-  
 
   <div class="form row">
     <div class="img">
       <!-- <img src="{% static './img/undraw_exams.svg' %}" alt="img"> -->
     </div>
-    {% if form.errors %}
-      <p class="error text-center">ユーザーID, パスワードが一致しません</p>
-    {% endif %}
+
     <form method="POST" action="{%url 'login'%}">
       {% csrf_token %}
-      <div class="user">
-      <label >ユーザーID</label>
 
-        {{ form.username }}
-        {{ form.username.errors }}
+      <div class="email">
+        <label>Email</label>
+        {{ form.email }} {{ form.email.errors }}
       </div>
-      
+
       <div class="password">
-      <label >パスワード</label>
-        {{ form.password }}
-        {{ form.password.errors }}
+        <label>Password</label>
+        {{ form.password }} {{ form.password.errors }}
       </div>
-      <div class="text-center">
 
+      {% if form.errors %}
+      <p class="error text-center">メールアドレス, パスワードが一致しません</p>
+      {% endif %}
+
+      <div class="text-center">
         <button type="submit" class="btn btn--shadow">Sign In</button>
       </div>
-      </form>
-    <p class="create text-center"><a href="../signup">Create an Account</a></p>
+    </form>
+    <p class="create text-center">
+      <a href="{% url 'it_english:signup' %}">Create an Account</a>
+    </p>
     <p class="forget text-center"><a href="#">Forget Password?</a></p>
   </div>
 </div>
-  
+
 {% endblock %}
