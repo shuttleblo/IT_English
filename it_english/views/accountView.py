@@ -16,7 +16,7 @@ def signup(request):
         if form.is_valid():
             user_instance = form.save()
             login(request, user_instance)
-            return redirect("it_english:choice")
+            return redirect("it_english:login")
     else:
         form = UserCreateForm()
 
