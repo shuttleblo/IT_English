@@ -44,8 +44,7 @@ body {
 .alert-primary {
     color: #c8c88d;
     background-color: #F0F0E0;
-<<<<<<< HEAD
-=======
+
     border-color: #F0F0E0;
 }
 
@@ -156,5 +155,4 @@ button.bg-primary:focus {
 
 a.text-primary:hover, a.text-primary:focus {
     color: #dfdfbd !important;
->>>>>>> 8a35da390b365aad34ad2ee0380dfe96c960b53a
 }
