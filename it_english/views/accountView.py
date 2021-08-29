@@ -30,9 +30,9 @@ class Account_login(View):
     def post(self, request, *arg, **kwargs):
         form = LoginForm(data=request.POST)
         if form.is_valid():
-            email = form.cleaned_data.get('email')
-            name = User.objects.get(email=email)
-            login(request, name)
+            username = form.cleaned_data.get('username')
+            user = User.objects.get(username=username)
+            login(request, user)
             return redirect('it_english:choice')
         return render(request, 'login/login.html', {'form': form, })
 

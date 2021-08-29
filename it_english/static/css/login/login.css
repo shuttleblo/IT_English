@@ -23,8 +23,7 @@ p {
   color: red;
 }
 
-.email,
-.password {
+.item_field {
   margin: 30px auto;
 }
 

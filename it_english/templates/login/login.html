@@ -13,18 +13,20 @@
     <form method="POST" action="{%url 'login'%}">
       {% csrf_token %}
 
-      <div class="email">
-        <label>Email</label>
-        {{ form.email }} {{ form.email.errors }}
-      </div>
-
-      <div class="password">
-        <label>Password</label>
-        {{ form.password }} {{ form.password.errors }}
-      </div>
-
+      {% for item in form %}
+        <div class="item_field">
+          <input 
+            type="{{item.field.widget.input_type}}"
+            placeholder="{{item.label}}"
+            class="form-control p-3" 
+            {% if item.field.required %}required{% endif %} 
+            name="{{item.name}}" 
+            id="{{item.id_for_label}}">
+        </div>
+      {% endfor %}
+      
       {% if form.errors %}
-      <p class="error text-center">メールアドレス, パスワードが一致しません</p>
+        ß<p class="error text-center">メールアドレス, パスワードが一致しません</p>
       {% endif %}
 
       <div class="text-center">
@@ -34,7 +36,7 @@
     <p class="create text-center">
       <a href="{% url 'it_english:signup' %}">Create an Account</a>
     </p>
-    <p class="forget text-center"><a href="#">Forget Password?</a></p>
+    {% comment %} <p class="forget text-center"><a href="#">Forget Password?</a></p> {% endcomment %}
   </div>
 </div>
 
