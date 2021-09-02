@@ -24,7 +24,7 @@
             id="{{item.id_for_label}}">
         </div>
       {% endfor %}
-      
+
       {% if form.errors %}
         ß<p class="error text-center">メールアドレス, パスワードが一致しません</p>
       {% endif %}
@@ -33,6 +33,10 @@
         <button type="submit" class="btn btn--shadow">Sign In</button>
       </div>
     </form>
+    <p><strong>-- OR --</strong></p>
+    <p class="google">
+      <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+    </p>
     <p class="create text-center">
       <a href="{% url 'it_english:signup' %}">Create an Account</a>
     </p>
