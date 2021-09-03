@@ -34,11 +34,11 @@ class Account_login(View):
             user = User.objects.get(username=username)
             login(request, user)
             return redirect('it_english:choice')
-        return render(request, 'login/login.html', {'form': form, })
+        return render(request, 'registration/login.html', {'form': form, })
 
     def get(self, request, *args, **kwargs):
         form = LoginForm(request.POST)
-        return render(request, 'login/login.html', {'form': form, })
+        return render(request, 'registration/login.html', {'form': form, })
 
 
 account_login = Account_login.as_view()
