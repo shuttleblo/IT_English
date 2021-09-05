@@ -7,25 +7,24 @@
     padding: 0;
     background-color: #fff;
   }
-  
-  .bar{
-      background-color: #073763;
-      margin-bottom: absolute;
-      margin-top: 100px;
+
+  a{
+    color:black
   }
   
+  
   .bar1{
-    background-color: #073763;
+    background-color: #A3A387;
     margin-top: 0px; 
   }
   
   #bar-title{
-      color:#FFFF00;
+      color:#000;
       font-size: 1.5em;
   
   } 
   
-  main {
+  #main {
   
     margin: auto;
     /* padding-right: 100px;
@@ -69,10 +68,10 @@
     margin-top: 20px;
   }
   .shadow {
-    background-color: #F0F8FF;
+    background-color: #F0F0E0;
     width: 800px;
     margin: auto;
-    border: solid 5px #000000;
+    border: solid 5px #F0F0E0;
     padding: 5px;
     filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
   }
@@ -137,12 +136,6 @@
     width: 100px;
   }
   
-  #footertitle{
-    color:#FFFF00;
-    margin-right: 15px; 
-    font-size: 1.5em;
-    padding-bottom: 15px;
-  }
   
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -156,4 +149,20 @@
   position: absolute;
       right: 10px;
   }
-  
+
+  #Home{
+    color:black;
+  }
+
+  #Profile{
+    color:black; 
+  }
+
+  #Logout{
+    color:black;
+  }
+ 
+  #Next{
+    margin-left:750px;
+    width:100px;
+  }
