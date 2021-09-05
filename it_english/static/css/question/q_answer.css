@@ -161,4 +161,8 @@
   #Logout{
     color:black;
   }
-  
+ 
+  #Next{
+    margin-left:750px;
+    width:100px;
+  }
