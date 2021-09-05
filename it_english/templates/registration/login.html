@@ -37,8 +37,8 @@
       </div>
     </form>
     <p class="text-center"><strong>-- OR --</strong></p>
-    <p class="google text-center">
-      <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+    {% comment %} <p class="google text-center">
+      <a href="{% provider_login_url 'google' %}">Login with Google</a>{% endcomment %}
     </p>
     <p class="create text-center">
       <a href="{% url 'it_english:signup' %}">Create an Account</a>
