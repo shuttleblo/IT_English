@@ -4,10 +4,11 @@ from django import forms
 
 
 class UserCreateForm(UserCreationForm):
+    # email = forms.EmailField(required=True, max_length=100)
 
     class Meta:
         model = User
-        fields = ("username", "password1", "password2")
+        fields = ("username","password1", "password2")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
