@@ -34,9 +34,9 @@
 
 {% for list in lists %}
 <tr>
-  <td id=>{{ list.word }}</td>
+  <td>{{ list.quiz }}</td>
   <td>{{ list.answer }}</td>
-  <td><a href="{% url 'edit' list.pk %}" class="btn btn-primary btn-lg active" role="button" aria-disabled="true"><i class="fas fa-pencil-alt"></i></a></td>
+  <td><a href="{% url 'word_edit' list.pk %}" class="btn btn-primary btn-lg active" role="button" aria-disabled="true"><i class="fas fa-pencil-alt"></i></a></td>
   <td><a href="{% url 'delete' list.pk %}" class="btn btn-success btn-lg active" role="button" aria-disabled="true"><i class="fas fa-trash"></i></a></td>
 
 </tr>
