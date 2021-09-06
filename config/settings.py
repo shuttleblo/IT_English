@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'it_english.apps.ItEnglishConfig',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +59,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,32 +106,28 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # OAuth2
 
-# AUTHENTICATION_BACKENDS = [
-#     'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
-#     'social_core.backends.google.GoogleOpenId',  # for Google authentication
-#     'social_core.backends.google.GoogleOAuth2',  # for Google authentication
-#     'social_core.backends.github.GithubOAuth2',  # for Github authentication
-#     'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
-#     'django.contrib.auth.backends.ModelBackend',
-#     'allauth.account.auth_backends.AuthenticationBackend'
-# ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
 
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google':{
-#         'SCOPE':[
-#             'profile',
-#             'email',
-#         ],
-#         'AUTH_PARAMS':{
-#             'access_type':'online',
-#         }
-#     }
-# }
+SOCIALACCOUNT_PROVIDERS = {
+    'google':{
+        'SCOPE':[
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS':{
+            'access_type':'online',
+        }
+    }
+}
 
-# SITE_ID = 2
+SITE_ID = 2
 
 LOGIN_URL = 'login/',
-LOGIN_REDIRECT_URL = '../../choice/'
+LOGIN_REDIRECT_URL = '/choice/'
+LOGOUT_REDIRECT_URL = 'login/'
 
 # from .oauth_settings import *
 

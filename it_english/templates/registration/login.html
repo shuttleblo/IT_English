@@ -1,5 +1,6 @@
 {% extends "registration/base.html" %}
 {% load static %}
+{% load socialaccount %}
 
 {% block body %}
 
@@ -37,8 +38,8 @@
       </div>
     </form>
     <p class="text-center"><strong>-- OR --</strong></p>
-    {% comment %} <p class="google text-center">
-      <a href="{% provider_login_url 'google' %}">Login with Google</a>{% endcomment %}
+    <p class="google text-center">
+      <a href="{% provider_login_url 'google' %}">Login with Google</a>
     </p>
     <p class="create text-center">
       <a href="{% url 'it_english:signup' %}">Create an Account</a>
