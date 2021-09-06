@@ -48,23 +48,52 @@ const quiz = [
    }
   }
   
-  setupQuiz();
+setupQuiz();
+
+
+
   
   const clickHandler = (e) => {
    if(quiz[quizIndex].correct === e.target.textContent){
-      window.alert('正解！');
+      $('.quiz_area_icon').addClass('true');
       score++;
+      quizIndex++;
    } else {
-      window.alert('不正解！');
+      $('.quiz_area_icon').addClass('false');
+      quizIndex++;
    }
+
+
+
+
+
+
+   /* setTimeout(function(){
+      //表示を元に戻す
+      $('.quiz_area_icon').removeClass('true false');
+      $('.quiz_area_bg').hide();
+      //問題のカウントを進める
+      quiz_Index++;
+      //次の問題を設定する
+      setupQuiz();
+  }, 1500); */
+
+  $("#Next").on('click', function () {
+   $('.quiz_area_icon').removeClass('true false');
+   $('.quiz_area_bg').hide();
+   //問題のカウントを進める
+   //次の問題を設定する
+   setupQuiz(); 
+ });
+
   
-   quizIndex++;
+
+
   
-   if(quizIndex < quizLength){
-     setupQuiz();
-   } else {
-     window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
-   }
+   if(quizIndex === quizLength){
+      document.getElementById('result').textContent='終了！あなたの正解数は' + score + '/' + quizLength + 'です！'
+      $("#Next").textContent="Finish";
+   } 
   };
   
   //ボタンをクリックしたら正誤判定
@@ -75,3 +104,4 @@ const quiz = [
    });
    handlerIndex++;
   };
+
