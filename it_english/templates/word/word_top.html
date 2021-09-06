@@ -1,0 +1,48 @@
+{% extends "word/base.html" %}
+{% load static %}
+
+
+{% block header %}
+<strong class="top_title">単語リスト</strong>
+{% endblock %}
+{% block body %}
+
+<div class='flash_notice'>
+  flash_notice追加予定
+</div>
+<div class='search_create'>
+
+<form action='' method="post" class='search'>
+<input type='search' name='search' placeholder="英単語を入力">
+<button type='submit' class="btn btn-secondary">
+  検索<i class="fas fa-search"></i>
+</button>
+
+<div>
+<button type="button" class="btn btn-secondary btn-lg create_button">新規作成</button>
+</div>
+</div>
+
+<div class='container'>
+<table>
+<tr class="title">
+<th class='word'>単語</th>
+<th class='answer'>解答</th>
+<th class='egit'>編集</th>
+<th class='delete'>削除</th>
+</tr>
+
+{% for list in lists %}
+<tr>
+  <td>{{ list.quiz }}</td>
+  <td>{{ list.answer }}</td>
+  <td><a href="{% url 'word_edit' list.pk %}" class="btn btn-primary btn-lg active" role="button" aria-disabled="true"><i class="fas fa-pencil-alt"></i></a></td>
+  <td><a href="{% url 'delete' list.pk %}" class="btn btn-success btn-lg active" role="button" aria-disabled="true"><i class="fas fa-trash"></i></a></td>
+
+</tr>
+{% endfor %}
+</table>
+</div>
+
+
+{% endblock %}
