@@ -59,10 +59,12 @@ setupQuiz();
   const clickHandler = (e) => {
    if(quiz[quizIndex].correct === e.target.textContent){
       $('.quiz_area_icon').addClass('true');
+      correctStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
       score++;
       quizIndex++;
    } else {
       $('.quiz_area_icon').addClass('false');
+      incorrectStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
       quizIndex++;
    }
 
@@ -82,7 +84,12 @@ setupQuiz();
   
    if(quizIndex === quizLength){
       document.getElementById('result').textContent='終了！あなたの正解数は' + score + '/' + quizLength + 'です！'
-      $("#Next").text("Finish");
+      for(var i = 0,len = correctStorage.length; i<len; i++){
+        var k = correctStoragestorage.key(i);
+        var v = storage(k);
+        console.log(k+':'+v);
+      }
+      $("#Next").val("Finish");
    } 
   };
   
