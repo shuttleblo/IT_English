@@ -33,7 +33,10 @@ const quiz = [
   const quizLength = quiz.length;
   let quizIndex = 0;
   let score =0;
-  
+
+var correctStorage = localStrage;
+var incorrectStorage = localStorage;
+
   
   const $button = document.getElementsByTagName('button');
   const buttonLength = $button.length;
@@ -65,19 +68,6 @@ setupQuiz();
 
 
 
-
-
-
-   /* setTimeout(function(){
-      //表示を元に戻す
-      $('.quiz_area_icon').removeClass('true false');
-      $('.quiz_area_bg').hide();
-      //問題のカウントを進める
-      quiz_Index++;
-      //次の問題を設定する
-      setupQuiz();
-  }, 1500); */
-
   $("#Next").on('click', function () {
    $('.quiz_area_icon').removeClass('true false');
    $('.quiz_area_bg').hide();
@@ -92,7 +82,7 @@ setupQuiz();
   
    if(quizIndex === quizLength){
       document.getElementById('result').textContent='終了！あなたの正解数は' + score + '/' + quizLength + 'です！'
-      $("#Next").textContent="Finish";
+      $("#Next").text("Finish");
    } 
   };
   
