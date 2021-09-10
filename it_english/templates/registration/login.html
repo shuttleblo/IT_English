@@ -1,0 +1,51 @@
+{% extends "registration/base.html" %}
+{% load static %}
+{% load socialaccount %}
+
+{% block body %}
+
+<div class="container">
+  <div class="title row">
+    <p class="text-center">Let's Get Started Now!!</p>
+  </div>
+
+  <div class="form row">
+    <div class="img">
+      <!-- <img src="{% static './img/undraw_exams.svg' %}" alt="img"> -->
+    </div>
+
+    <form method="POST" action="{%url 'login'%}">
+      {% csrf_token %}
+
+      {% for item in form %}
+        <div class="item_field">
+          <input 
+            type="{{item.field.widget.input_type}}"
+            placeholder="{{item.label}}"
+            class="form-control p-3" 
+            {% if item.field.required %}required{% endif %} 
+            name="{{item.name}}" 
+            id="{{item.id_for_label}}">
+        </div>
+      {% endfor %}
+
+      {% if form.errors %}
+        ß<p class="error text-center">ユーザー名, パスワードが一致しません</p>
+      {% endif %}
+
+      <div class="text-center">
+        <button type="submit" class="btn btn--shadow">Sign In</button>
+      </div>
+    </form>
+    <p class="text-center"><strong>-- OR --</strong></p>
+    <p class="google text-center">
+      <a href="{% provider_login_url 'google' %}">Login with Google</a>
+    </p>
+    <p class="create text-center">
+      <a href="{% url 'it_english:signup' %}">Create an Account</a>
+    </p>
+    {% comment %} <p class="forget text-center"><a href="#">Forget Password?</a></p> {% endcomment %}
+  </div>
+</div>
+
+{% endblock %}

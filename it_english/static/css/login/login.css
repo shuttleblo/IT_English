@@ -19,8 +19,11 @@ p {
   padding: 40px 200px;
 }
 
-.user,
-.password {
+.error {
+  color: red;
+}
+
+.item_field {
   margin: 30px auto;
 }
 
