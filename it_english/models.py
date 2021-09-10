@@ -16,9 +16,16 @@ class AdministratorModel(models.Model):
   password = models.CharField(max_length=50)
 
 class QuizModel(models.Model):
-  quiz = models.CharField(max_length= 20)
-  answer = models.CharField(max_length= 20)
+  quiz = models.CharField(max_length= 200)
+  op1 = models.CharField(max_length=200)
+  op2 = models.CharField(max_length=200)
+  op3 = models.CharField(max_length=200)
+  op4 = models.CharField(max_length=200)
+  answer = models.CharField(max_length= 200)
   administrator_id = models.ForeignKey(AdministratorModel, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.quiz
 
 class Quiz_levelModel(models.Model):
   level = models.CharField(max_length= 20)

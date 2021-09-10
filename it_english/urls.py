@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls.conf import include
 
-from it_english.views import accountView,questionView,word_edit_view
+from it_english.views import accountView, questionView, wordEditView
 
 app_name = "it_english"
 
@@ -11,9 +11,10 @@ urlpatterns = [
     path('login/', accountView.account_login, name='login'),
     path('choice/',questionView.choiceTemplateView.as_view(), name='choice'),
 
-    path('word_top/', word_edit_view.word_top, name='word_top'),
-    path('word_create/', word_edit_view.word_create, name='word_create'),
+    path('word_top/', wordEditView.word_top, name='word_top'),
+    path('word_create/', wordEditView.word_create, name='word_create'),
     path('result/',questionView.result,name='result'),
-    path('word_edit/', word_edit_view.word_edit, name='word_edit'),
+    path('word_edit/', wordEditView.word_edit, name='word_edit'),
     path('q_answer/',questionView.q_answer,name='q_answer'),
+    path('quiz', wordEditView.quiz, name='quiz')
 ]
