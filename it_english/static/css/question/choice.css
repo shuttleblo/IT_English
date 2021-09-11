@@ -14,13 +14,13 @@ body {
     text-align:center;
 }
 h1 {
-    margin: 200px auto;
+    margin: 40px auto;
     font-size:50px;
 }
 
 .animation {
-    width:200px;
-    height:60px;
+    width:300px;
+    height:70px;
     text-align:center;
     border:2px solid #333 !important;
     border-radius: 4px;
@@ -43,10 +43,10 @@ h1 {
     position:relative;
 }
 .effect {
-    width:200px;
-    height:60px;
+    width:300px;
+    height:70px;
     top:-2px;
-    left:-200px;
+    left:-300px;
     background: #333;
     position:absolute;
     transition:all .5s ease;
