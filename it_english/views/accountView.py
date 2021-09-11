@@ -7,7 +7,10 @@ from django.http import HttpResponse, response
 
 
 def index(request):
-    return HttpResponse("仮のトップページ")
+    if request.user.is_authenticated:
+        return redirect("it_english:choice")
+    else:
+        return redirect("it_english:login")
 
 
 def signup(request):
