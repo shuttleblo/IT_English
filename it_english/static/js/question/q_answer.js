@@ -33,7 +33,10 @@ const quiz = [
   const quizLength = quiz.length;
   let quizIndex = 0;
   let score =0;
-  
+
+var correctStorage = localStorage;
+var incorrectStorage = sessionStorage;
+
   
   const $button = document.getElementsByTagName('button');
   const buttonLength = $button.length;
@@ -48,23 +51,44 @@ const quiz = [
    }
   }
   
-  setupQuiz();
+setupQuiz();
+
+
+
   
   const clickHandler = (e) => {
    if(quiz[quizIndex].correct === e.target.textContent){
-      window.alert('正解！');
+      $('.quiz_area_icon').addClass('true');
+
+      correctStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
       score++;
+      quizIndex++;
    } else {
-      window.alert('不正解！');
+      $('.quiz_area_icon').addClass('false');
+      
+      incorrectStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
+      quizIndex++;
    }
+
+
+
+  $("#Next").on('click', function () {
+   $('.quiz_area_icon').removeClass('true false');
+   $('.quiz_area_bg').hide();
+   //問題のカウントを進める
+   //次の問題を設定する
+   setupQuiz(); 
+ });
+
   
-   quizIndex++;
+
+
   
-   if(quizIndex < quizLength){
-     setupQuiz();
-   } else {
-     window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
-   }
+   if(quizIndex === quizLength){
+      document.getElementById('result').textContent='終了！あなたの正解数は' + score + '/' + quizLength + 'です！'
+      $("#Next").val("Finish");
+      location.href = "/result";
+   } 
   };
   
   //ボタンをクリックしたら正誤判定
@@ -75,3 +99,4 @@ const quiz = [
    });
    handlerIndex++;
   };
+
