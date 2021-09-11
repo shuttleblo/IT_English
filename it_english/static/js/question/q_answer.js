@@ -1,33 +1,43 @@
 
 const quiz = [
-   {
-     question: 'Apple',
-     answers: [
-       'りんご',
-       'レモン',
-       'ぶどう',
-       'なし'
-       ],
-       correct: 'りんご'
-   }, {
-     question: 'Teacher',
-     answers: [
-       '警察',
-       '調理師',
-       '銀行員',
-       '先生'
-       ],
-       correct: '先生'
-   }, {
-     question: 'Bicycle',
-     answers: [
-       '車',
-       '飛行機',
-       '電車',
-       '自転車'
-       ],
-       correct: '自転車'
-   }
+  {
+    question: 'allocation',
+    answers: [
+      '割り当て',
+      '認証 ',
+      '可用性',
+      '機能'
+      ],
+      correct: '割り当て'
+  },{
+    question: 'compatibility',
+    answers: [
+      '互換性',
+      '補完、完了',
+      '制約',
+      '遅延'
+      ],
+      correct: '互換性'
+  },{
+    question: ' duration',
+    answers: [
+      '処理',
+      '期間',
+      '改装',
+      '実装'
+      ],
+      correct: '期間'
+  },{
+    question: ' enumeration',
+    answers: [
+      '機能',
+      '抽出する',
+      '外部の',
+      '列挙'
+      ],
+      correct: '列挙'
+  },
+
   ];
   
   const quizLength = quiz.length;
