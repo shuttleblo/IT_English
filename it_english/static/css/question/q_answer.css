@@ -17,7 +17,9 @@
     background-color: #A3A387;
     margin-top: 0px; 
   }
-  
+  .nav-link {
+    color: beige !important;
+  }
   #bar-title{
       color:#000;
       font-size: 1.5em;
