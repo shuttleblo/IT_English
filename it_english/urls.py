@@ -12,7 +12,7 @@ urlpatterns = [
     path('choice/',questionView.choiceTemplateView.as_view(), name='choice'),
 
     path('word_top/', wordEditView.word_top, name='word_top'),
-    path('word_create/', wordEditView.word_create, name='word_create'),
+    path('word_add/', wordEditView.word_add, name='word_add'),
     path('result/',questionView.result,name='result'),
     path('word_edit/', wordEditView.word_edit, name='word_edit'),
     path('q_answer/',questionView.q_answer,name='q_answer'),

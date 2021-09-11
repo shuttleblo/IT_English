@@ -1,4 +1,5 @@
 
+from it_english.forms import QuizAddForm
 from it_english.models import QuizModel
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -6,15 +7,25 @@ from django.http import HttpResponse
 
 def word_top(request):
     lists = QuizModel.objects.all()
-    return render(request, 'word/word_top.html',{"lists": lists})
+    return render(request, 'quiz/word_top.html',{"lists": lists})
 
-
-def word_create(request):
-    return render(request, 'word/word_create.html',{})
-
+def word_add(request):
+    if request.user.is_staff:
+        form = QuizAddForm
+        if(request.method == 'POST'):
+            form = QuizAddForm(request.POST)
+            if(form.is_valid()):
+                form.save()
+                return redirect('quiz/word_add.html')
+        context = {
+            'form':form
+        }
+        return render(request, 'quiz/word_add.html',context)
+    else:
+        return redirect('quiz')
 
 def word_edit(request):
-    return render(request, 'word/word_edit.html',{})
+    return render(request, 'quiz/word_edit.html',{})
 
 def quiz(request):
     if request.method == 'POST':
@@ -28,18 +39,20 @@ def quiz(request):
             total += 1
             print(request.POST.get(q.quiz))
             print(q.answer)
-            if q.ans == request.POST.get(q.question):
+            if q.answer == request.POST.get(q.quiz):
                 score += 10
                 correct += 1
             else:
                 wrong += 1
         percent = score / (total * 10) * 100
         context = {
-            'correct':correct,
+            'score':score,
             'percent':percent,
+            'correct':correct,
+            'wrong':wrong,
             'total':total,
         }
-        return render(request, 'quiz/quiz.html', context)
+        return render(request, 'quiz/result.html', context)
     else:
         quizzes = QuizModel.objects.all()
         context = {
