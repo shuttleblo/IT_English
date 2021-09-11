@@ -1,0 +1,39 @@
+{% extends "question/base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/question/result.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="inner">
+        <h1>終了！お疲れ様です</h1>
+
+        <div class="answer">
+            <table class="table_correct table-bordered">
+                <thead class="thread">
+                    <tr><th colspan="2">正解した問題</th></tr>
+                </thread>
+                <tbody id="tbody_correct">
+                </tbody>
+            </table>
+            <table class="table_incorrect table-bordered">
+                <thead class="thread">
+                    <tr><th colspan="2">不正解の問題</th></tr>
+                </thread>
+                <tbody id="tbody_incorrect">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="back">
+            <div class="animation">
+                <div class="effect"></div>
+                    <a href="{% url 'it_english:choice' %}">トップに戻る</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

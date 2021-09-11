@@ -1,0 +1,32 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>it_english</title>
+    <script src="https://kit.fontawesome.com/6716af155d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/word/word.css' %}">
+
+</head>
+
+<header>
+    <div>
+        {% block header %}
+        {% endblock %}
+    </div>
+    <div class='My_page'>
+        <a href='#'>My page</a>
+    </div>
+    <div class='logout'>
+        <a href='#'>logout</a>
+    </div>
+
+</header>
+
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

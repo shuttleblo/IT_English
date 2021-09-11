@@ -133,3 +133,6 @@ dmypy.json
 
 # secret settings
 /config/local_secret_settings.py
+
+# API
+/config/oauth_settings.py

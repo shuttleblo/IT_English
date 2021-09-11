@@ -21,9 +21,9 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 
 ## 開発メンバー
--[]
--[]
--[]
+-[Shuttleblo](https://github.com/shuttleblo)
+-[Daichi](https://github.com/daichi0918)
+-[Wakita](https://github.com/waktia)
 -[RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
 
 ## 機能
@@ -33,3 +33,7 @@ Python 3.9.6
 Django 3.2.6
 ```
 ## 使用技術
+- JavaScript
+- Python
+- Django
+- Bootstrap
