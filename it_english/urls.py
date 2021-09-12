@@ -15,6 +15,6 @@ urlpatterns = [
     path('word_add/', wordEditView.word_add, name='word_add'),
     path('result/',questionView.result,name='result'),
     path('word_edit/', wordEditView.word_edit, name='word_edit'),
-    path('q_answer/',questionView.q_answer,name='q_answer'),
+    path('q_answer/',questionView.q_answerTemplateView.as_view(),name='q_answer'),
     path('quiz', wordEditView.quiz, name='quiz')
 ]
