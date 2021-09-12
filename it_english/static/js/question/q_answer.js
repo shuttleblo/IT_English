@@ -36,114 +36,21 @@ const quiz = [
       '列挙'
       ],
       correct: '列挙'
-  },{
-    question: ' exclude',
-    answers: [
-      '拡張する',
-      '除外する',
-      '抽出する',
-      '重複する'
-      ],
-      correct: '除外する'
-  },{
-    question: ' fetch',
-    answers: [
-      '呼び出す',
-      '実装する',
-      '取得する',
-      '重複する'
-      ],
-      correct: '取得する'
-  },{
-    question: ' identifier',
-    answers: [
-      '初期化',
-      '識別子',
-      '移行',
-      '修正'
-      ],
-      correct: '識別子'
-  },{
-    question: ' latency',
-    answers: [
-      '機能',
-      '待ち時間',
-      '表現',
-      '実行時'
-      ],
-      correct: '待ち時間'
-  },{
-    question: ' execute',
-    answers: [
-      '拡張する',
-      '除外する',
-      '抽出する',
-      '実行する'
-      ],
-      correct: '実行する'
-  },{
-    question: 'transition',
-    answers: [
-      '簡素化',
-      '分割',
-      '修正',
-      '遷移 '
-      ],
-      correct: '遷移 '
   },
-{
-    question: 'toggle',
-    answers: [
-      '転送する',
-      '切り替える',
-      '終了する',
-      '微調整する'
-      ],
-      correct: '切り替える'
-  },
-{
-    question: ' typo',
-    answers: [
-      '入力ミス',
-      '検証',
-      '列挙',
-      '拡張'
-      ],
-      correct: '入力ミス'
-  },{
-    question: 'tweak',
-      answers: [
-        '切り替える',
-        '終了する',
-        '転送する',
-        '微調整する'
-        ],
-        correct: '微調整する'
-    },{
-    question: 'unique',
-      answers: [
-        '一意の',
-        '静的な',
-        '生の',
-        '遠隔の'
-        ],
-        correct: '一意の'
-    },
- {
-    question: 'syntax',
-      answers: [
-        '接頭辞',
-        '仕様',
-        '構文',
-        '機能'
-        ],
-        correct: '構文'
-    },
- 
 
   ];
-  
-  const quizLength = quiz.length;
+
+console.log(localStorage.getItem('count'));
+
+var quizCount = Number(localStorage.getItem('count'));
+
+console.log(quizCount);
+
+localStorage.clear();
+
+  const quizLength = quizCount;
+  console.log(quizLength+3);
+
   let quizIndex = 0;
   let score =0;
 

@@ -52,3 +52,4 @@ window.addEventListener('load',function(){
   incorrectStorage.clear();
 });
 
+localStorage.clear();
