@@ -140,6 +140,7 @@ var incorrectStorage = sessionStorage;
      buttonIndex++;
    }
   }
+
   
 setupQuiz();
 

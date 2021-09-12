@@ -16,7 +16,7 @@
         <script type="text/javascript">
           function pronounce() {
             var utterThis = new SpeechSynthesisUtterance();
-            var textContent = document.getElementById('js-question').textContent
+            var textContent = quizshuffle[quizIndex].question
             utterThis.text = textContent;
             utterThis.lang = 'en-US'
             speechSynthesis.speak(utterThis);
