@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 def word_top(request):
     lists = QuizModel.objects.all()
-    return render(request, 'quiz/word_top.html',{"lists": lists})
+    return render(request, 'word/word_top.html',{"lists": lists})
 
 def word_add(request):
     if request.user.is_staff:
@@ -59,5 +59,3 @@ def quiz(request):
             'quizzes':quizzes
         }
         return render(request, 'quiz/quiz.html', context)
-
-
