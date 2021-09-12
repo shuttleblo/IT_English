@@ -206,9 +206,9 @@
     transform: translate(-50%, -50%);
     color: red;
     display: none;
-    font-size: 10em;
+    font-size: 13em;
     font-weight: bold;
-    -webkit-text-stroke: 4px #FFF;
+    /* -webkit-text-stroke: 1px #FFF; */
 }
 
 /* .trueまたは.falseのクラスが付与されたら表示するものとみなす */
@@ -218,7 +218,7 @@
 
 /* .trueは正解（〇を表示） */
 .quiz_area_icon.true:before{
-    content: '〇';
+    content: '○';
     color: red;
 }
 /* .falseは不正解（×を表示） */
@@ -227,10 +227,6 @@
     color: blue;
 }
 
-.container-fluid{
-  width: 0 auto;
-
-}
 .next{
   text-align: center;
 }
