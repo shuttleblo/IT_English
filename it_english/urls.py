@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls.conf import include
 
-from it_english.views import accountView, questionView, wordEditView, profileView
+from it_english.views import accountView, questionView, wordEditView, profileView,aboutUsView
 
 app_name = "it_english"
 
@@ -18,4 +18,5 @@ urlpatterns = [
     path('q_answer/',questionView.q_answerTemplateView.as_view(),name='q_answer'),
     path('quiz', wordEditView.quiz, name='quiz'),
     path('profile/',profileView.comingsoon,name='comingsoon'),
+    path('aboutus/',aboutUsView.authors,name='aboutus'),
 ]
