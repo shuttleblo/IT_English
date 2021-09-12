@@ -6,7 +6,7 @@ const quiz = [
   {question:'attribute',answers:['属性','機能','構文','条件'],correct:'属性'},
   {question:'available',answers:['圧縮する','詳細な','非対応の','利用可能な'],correct:'利用可能な'},
   {question:'branch',answers:['キャッシュ','枝/ブランチ','コア','生成'],correct:'枝/ブランチ'},
-  {question:'cache',answers:['キャッシュ','定義','仕様','簡素化'],correct:''},
+  {question:'cache',answers:['キャッシュ','定義','仕様','簡素化'],correct:'キャッシュ'},
   {question:'capacity',answers:['同期','容量','表示','分割'],correct:'容量'},
   {question:'case',answers:['設定','範囲','制限','大文字小文字の区別'],correct:'大文字小文字の区別'},
   {question:'component',answers:['表現','部品','条件','削除'],correct:'部品'},
@@ -100,7 +100,6 @@ var quizCount = Number(localStorage.getItem('count'));
 
 console.log(quizCount);
 
-localStorage.clear();
 
 const quizLength = quizCount;
 

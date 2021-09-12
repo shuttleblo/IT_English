@@ -8,6 +8,7 @@ var makeTableCorrect = function(){
 
   // テーブルの出力
   for (var i=0; i < correctStorage.length; i++) {
+    if(correctStorage.key(i)!=="count"){
       var _key = correctStorage.key(i);
       var tr = document.createElement("tr");
       var td1 = document.createElement("td");
@@ -16,7 +17,8 @@ var makeTableCorrect = function(){
       tr.appendChild(td1);
       tr.appendChild(td2);
       td1.innerHTML = _key;
-      td2.innerHTML = correctStorage.getItem(_key);
+      td2.innerHTML = correctStorage.getItem(_key); 
+    }
   }
 };
 
@@ -51,5 +53,3 @@ window.addEventListener('load',function(){
   makeTableIncorrect();
   incorrectStorage.clear();
 });
-
-localStorage.clear();
