@@ -6,6 +6,14 @@ body {
     justify-content:center;
     align-items:center;
 }
+
+#position{
+    margin-top:700px;
+}
+
+#finish{
+    margin-top:700px; 
+}
 .inner {
     position:absolute;
     top:50%;
