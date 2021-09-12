@@ -51,3 +51,4 @@ window.addEventListener('load',function(){
   makeTableIncorrect();
   incorrectStorage.clear();
 });
+
