@@ -49,7 +49,7 @@ var quiz = [
   {question:'administrator',answers:['優先順位','進行状況','概要','管理者'],correct:'管理者'},
   {question:'aggregate',answers:['数値の','集約する','通知する','始める'],correct:'集約する'},
   {question:'annotation',answers:['数字','修正','最大数','注釈'],correct:'注釈'},
-  {question:'append',answers:['追加する','削除する','一致する','繰り返す'],correct:''},
+  {question:'append',answers:['追加する','削除する','一致する','繰り返す'],correct:'追加する'},
   {question:'applicable',answers:['非推奨の','初期化された','該当する/適用可能な','汎用的な'],correct:'該当する/適用可能な'},
   {question:'assign',answers:['取得する','終了させる','代入する','確実にする'],correct:'代入する'},
   {question:'authentification',answers:['暗号化','拡張','実行','認証'],correct:'認証'},
