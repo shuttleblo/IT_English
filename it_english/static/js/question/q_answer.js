@@ -1,5 +1,5 @@
 
-const quiz = [
+var quiz = [
   //ベーシック
   {question:'argument',answers:['配列','引数','属性','機能'],correct:'引数'},
   {question:'array',answers:['容量','要素','配列','例外'],correct:'配列'},
@@ -81,7 +81,7 @@ const quiz = [
   {question:'numeric',answers:['初期の','数値の','外部の','既存の'],correct:'数値の'},
   {question:'optimize',answers:['取得する','始動する','最適化する','終了する'],correct:'最適化する'},
   {question:'redundant',answers:['内部の','外部の','確かな','冗長な'],correct:'冗長な'},
-  {question:'static',answers:['動的な','実行可能な','静的な','有効な'],correct:''},
+  {question:'static',answers:['動的な','実行可能な','静的な','有効な'],correct:'静的な'},
   {question:'syntax',answers:['構文','証明','列挙','期間'],correct:'構文'},
   {question:'terminate',answers:['開始する','終了する','追加する','削除する'],correct:'終了する'},
   {question:'toggle',answers:['編集する','符号化する','切り替える','検出する'],correct:'切り替える'},
@@ -93,6 +93,24 @@ const quiz = [
   {question:'verify',answers:['生成する','検証する','非表示にする','取り込む'],correct:'検証する'},
   {question:'verbose',answers:['抽象的な','該当する','詳細な','関連した'],correct:'詳細な'},
   ];
+
+  var shuffleByES5 = function (array) {
+    // deep copy
+    var ary = array.slice();
+    for (var i = ary.length - 1; 0 < i; i--) {
+      var r = Math.floor(Math.random() * (i + 1));
+      // ary[i] <-> ary[r]
+      var temp = ary[i];
+      ary[i] = ary[r];
+      ary[r] = temp;
+    }
+    return ary;
+  };
+
+  const quizshuffle = shuffleByES5(quiz);
+
+  console.log(quizshuffle.join(','));
+
 
 console.log(localStorage.getItem('count'));
 
@@ -115,10 +133,10 @@ var incorrectStorage = sessionStorage;
   
   //クイズの問題、選択肢を定義
   const setupQuiz = () => {
-   document.getElementById('js-question').textContent = quiz[quizIndex].question;
+   document.getElementById('js-question').textContent = quizshuffle[quizIndex].question;
    let buttonIndex = 0;
    while(buttonIndex < buttonLength){
-     $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
+     $button[buttonIndex].textContent = quizshuffle[quizIndex].answers[buttonIndex];
      buttonIndex++;
    }
   }
@@ -129,16 +147,16 @@ setupQuiz();
 
   
   const clickHandler = (e) => {
-   if(quiz[quizIndex].correct === e.target.textContent){
+   if(quizshuffle[quizIndex].correct === e.target.textContent){
       $('.quiz_area_icon').addClass('true');
 
-      correctStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
+      correctStorage.setItem(quizshuffle[quizIndex].question,quizshuffle[quizIndex].correct);
       score++;
       quizIndex++;
    } else {
       $('.quiz_area_icon').addClass('false');
       
-      incorrectStorage.setItem(quiz[quizIndex].question,quiz[quizIndex].correct);
+      incorrectStorage.setItem(quizshuffle[quizIndex].question,quizshuffle[quizIndex].correct);
       quizIndex++;
    }
 
