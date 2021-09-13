@@ -7,17 +7,25 @@
 
 {% block body %}
 
-<div class="container">
+<div class="container" >
     <div class="inner">
-        <h1>問題数を選んでください。</h1>
+        <h1 id="position">問題数を選んでください。</h1>
         <div class="choice">
             <div class="animation">
                 <div class="effect"></div>
-                    <a href="{% url 'it_english:q_answer' %}"> 10問 </a>
+                    <a href="/q_answer" id="Five"> 5問 </a>
             </div>
             <div class="animation">
                 <div class="effect"></div>
-                    <a href="{% url 'it_english:q_answer' %}"> 50問 </a>
+                    <a href="/q_answer" id="Ten"> 10問 </a>
+            </div>
+            <div class="animation">
+                <div class="effect"></div>
+                    <a href="/q_answer" id="Thirty"> 30問 </a>
+            </div>
+            <div class="animation">
+                <div class="effect"></div>
+                    <a href="/q_answer" id="Fifty"> 50問 </a>
             </div>
         </div>
     </div>

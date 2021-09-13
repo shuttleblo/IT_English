@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Kaisei Opti', serif !important;
   }
   html, body {
     margin: 0;
@@ -12,12 +12,20 @@
     color:black
   }
   
-  
+  .nav-item{
+      font-size: 25px;
+  }
   .bar1{
     background-color: #A3A387;
     margin-top: 0px; 
   }
-  
+  .navbar-nav{
+    margin: 0 30px;
+  }
+  .nav-link {
+    color: beige !important;
+    margin: 0 10px;
+  }
   #bar-title{
       color:#000;
       font-size: 1.5em;
@@ -26,7 +34,7 @@
   
   #main {
   
-    margin: auto;
+    margin: 0 auto;
     /* padding-right: 100px;
     padding-left: 100px; */
     padding-top: 20px;
@@ -43,12 +51,20 @@
     text-align: center;
     font-size: 3.5em;
   }
+  
   #title{
     margin-top: 100px;
     /* font-family: 'Oswald', sans-serif; */
   }
+  #js-question{
+    font-size: 50px;
+  }
   
-  
+  #button{
+    width: 200px;
+    margin: 10px;
+  }
+
   #a_select{
     text-align: center;
     font-size:1.8em;
@@ -150,29 +166,21 @@
       right: 10px;
   }
 
-  #Home{
-    color:black;
-  }
 
-  #Profile{
-    color:black; 
-  }
-
-  #Logout{
-    color:black;
-  }
  
   #Next{
-    margin-left:750px;
-    width:100px;
-    height:50px;
+    margin: 0 auto;
+    width:600px;
+    height:60px;
     background-color: black;
     color:#fff;
+    font-size: 30px;
   }
 
   #result{
     margin-left:450px;
   }
+  
 
   .quiz_area_bg{
     position: absolute;
@@ -198,9 +206,9 @@
     transform: translate(-50%, -50%);
     color: red;
     display: none;
-    font-size: 10em;
+    font-size: 13em;
     font-weight: bold;
-    -webkit-text-stroke: 4px #FFF;
+    /* -webkit-text-stroke: 1px #FFF; */
 }
 
 /* .trueまたは.falseのクラスが付与されたら表示するものとみなす */
@@ -210,11 +218,15 @@
 
 /* .trueは正解（〇を表示） */
 .quiz_area_icon.true:before{
-    content: '〇';
+    content: '○';
     color: red;
 }
 /* .falseは不正解（×を表示） */
 .quiz_area_icon.false:before{
     content: '×';
     color: blue;
+}
+
+.next{
+  text-align: center;
 }
