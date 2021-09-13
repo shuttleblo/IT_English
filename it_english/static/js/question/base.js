@@ -1,3 +1,8 @@
+$("#bar-title").click(function(){
+    localStorage.clear();
+    sessionStorage.clear();
+  });
+
 $("#Home").click(function(){
     localStorage.clear();
     sessionStorage.clear();
