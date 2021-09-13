@@ -44,7 +44,7 @@
                     <a class="nav-link" href="{% url 'it_english:comingsoon' %}" id="Profile">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'it_english:aboutus' %}" id="About Us">About Us</a>
+                    <a class="nav-link" href="{% url 'it_english:aboutus' %}" id="AboutUs">About Us</a>
                 </li>
                 <li class="nav-item">
                     <!-- メニュー3 -->
@@ -66,6 +66,7 @@
   </header>
     {% block body %}
     {% endblock %}
+    <script type="text/javascript" src="{% static 'js/question/base.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/question/q_answer.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/question/result.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/question/choice.js' %}"></script>
