@@ -152,12 +152,14 @@ setupQuiz();
       $('.quiz_area_icon').addClass('true');
 
       correctStorage.setItem(quizshuffle[quizIndex].question,quizshuffle[quizIndex].correct);
+      document.getElementById('result').textContent="正解:"+quizshuffle[quizIndex].correct;
       score++;
       quizIndex++;
    } else {
       $('.quiz_area_icon').addClass('false');
       
       incorrectStorage.setItem(quizshuffle[quizIndex].question,quizshuffle[quizIndex].correct);
+      document.getElementById('result').textContent="正解:"+quizshuffle[quizIndex].correct;
       quizIndex++;
    }
 
@@ -166,6 +168,7 @@ setupQuiz();
   $("#Next").on('click', function () {
    $('.quiz_area_icon').removeClass('true false');
    $('.quiz_area_bg').hide();
+   document.getElementById('result').textContent=null;
    //問題のカウントを進める
    //次の問題を設定する
    setupQuiz(); 
@@ -176,7 +179,6 @@ setupQuiz();
 
   
    if(quizIndex === quizLength){
-      document.getElementById('result').textContent='終了！あなたの正解数は' + score + '/' + quizLength + 'です！'
       $("#Next").val("Finish");
       location.href = "/result";
    } 
