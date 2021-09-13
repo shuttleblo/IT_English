@@ -6,38 +6,37 @@
   <div class="container-fluid">
     <h1 style="text-align:center" id="title"></h1>
     <div class="shadow p-2">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 style="text-align:center" id="js-question">
-        </h1>
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="text-align:center" id="js-question">
+          </h1>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <input type="button" id="button" onclick="pronounce()" value="発音を確認">
+          <script type="text/javascript">
+            function pronounce() {
+              var utterThis = new SpeechSynthesisUtterance();
+              var textContent = quizshuffle[quizIndex].question
+              utterThis.text = textContent;
+              utterThis.lang = 'en-US'
+              speechSynthesis.speak(utterThis);
+              }
+          </script>
+        </div>
       </div>
-      <div class="col d-flex justify-content-center">
-        <input type="button" id="button" onclick="pronounce()" value="発音を確認">
-        <script type="text/javascript">
-          function pronounce() {
-            var utterThis = new SpeechSynthesisUtterance();
-            var textContent = quizshuffle[quizIndex].question
-            utterThis.text = textContent;
-            utterThis.lang = 'en-US'
-            speechSynthesis.speak(utterThis);
-            }
-        </script>
+      <br />
+      <br /> 
+      <br /> 
+      <div class="quiz_area">
+        <div class="quiz_area_bg"></div>
+        <div class="quiz_area_icon"></div>
       </div>
-    </div>
-    <br />
-    <br /> 
-    <br /> 
-    <div class="quiz_area">
-      <div class="quiz_area_bg"></div>
-      <div class="quiz_area_icon"></div>
-
-    </div>
-    <div id="a_select">
-      <button type="button" class="btn btn-outline-dark" id="button1" value="" size="20">Primary</button>
-      <button type="button" class="btn btn-outline-dark" id="button2" value="" size="20">Primary</button>
-      <button type="button" class="btn btn-outline-dark" id="button3" value="" size="20">Primary</button>
-      <button type="button" class="btn btn-outline-dark" id="button4" value="" size="20">Primary</button>
-    </div>
+      <div id="a_select">
+        <button type="button" class="btn btn-outline-dark" id="button1" value="" size="20">Primary</button>
+        <button type="button" class="btn btn-outline-dark" id="button2" value="" size="20">Primary</button>
+        <button type="button" class="btn btn-outline-dark" id="button3" value="" size="20">Primary</button>
+        <button type="button" class="btn btn-outline-dark" id="button4" value="" size="20">Primary</button>
+      </div>
   
   <!-- <div class="row">
     <div class="col-lg-3 offset-md-10" >
@@ -47,16 +46,16 @@
     <-- <button type="submit" class="btn btn-warning" id="submit">Next
       <i class="fa fa-check" aria-hidden="true"></i>
     </button> -->
-  </div>
-  </div>
-</div>
+    </div>
+    <div class='next'>
+      <input type="button" class="mt-5" id="Next" value="Next">
+    </div>
   </div>
 </main>
-<div>
-  <input type="button" class="mt-5" id="Next" value="Next" />
-</div>
+
 <h3 class="mt-5" id="result">
 </h3>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
