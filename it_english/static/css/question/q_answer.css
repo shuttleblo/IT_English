@@ -165,7 +165,9 @@
   }
  
   #Next{
-    margin-left:750px;
+    
+    position:absolute;
+    left:850px;
     width:100px;
     height:50px;
     background-color: black;
@@ -173,7 +175,11 @@
   }
 
   #result{
-    margin-left:450px;
+    position: relative;
+    top:60px;
+    display: inline;
+    margin-left:500px;
+    
   }
 
   .quiz_area_bg{
