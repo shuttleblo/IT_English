@@ -17,7 +17,7 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 <a id="IT_English"></a>
 ## IT Englishとは
-**アプリ説明**
+**IT特有の英単語をクイズ形式で覚えるアプリです。**
 
 
 ## 開発メンバー
@@ -27,6 +27,12 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 -[RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
 
 ## 機能
+- ログイン・新規ユーザー登録機能
+- Google認証
+- クイズ機能(問題数選択可/ランダム表示)
+- 正解/不正解を表示する結果画面
+- 音声APIによる発音
+
 ## 動作保証環境
 ```
 Python 3.9.6
@@ -37,3 +43,7 @@ Django 3.2.6
 - Python
 - Django
 - Bootstrap
+- ajax
+- jQuery
+- SQLite3
+
