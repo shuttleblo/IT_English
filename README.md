@@ -21,9 +21,9 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 
 ## 開発メンバー
--[Shuttleblo](https://github.com/shuttleblo)
+-[Shuttleblo](https://github.com/shuttleblo)<br>
 -[Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒<br>
--[Wakita](https://github.com/waktia)
+-[Wakita](https://github.com/waktia)<br>
 -[RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
 
 ## 機能
