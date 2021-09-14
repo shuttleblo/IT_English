@@ -21,7 +21,7 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 
 ## 開発メンバー
-- [Shuttleblo](https://github.com/shuttleblo)
+- [Shuttleblo](https://github.com/shuttleblo) 学べば学ぶほど、経営者になりたくなる新卒
 - [Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒
 - [Wakita](https://github.com/waktia)
 - [RINA](https://github.com/Rinasham) 最近の趣味は大逆転裁判の英語版をやること
