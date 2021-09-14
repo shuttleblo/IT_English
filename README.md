@@ -17,16 +17,22 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 <a id="IT_English"></a>
 ## IT Englishとは
-**アプリ説明**
+**IT特有の英単語をクイズ形式で覚えるアプリです。**
 
 
 ## 開発メンバー
--[Shuttleblo](https://github.com/shuttleblo)
--[Daichi](https://github.com/daichi0918)
--[Wakita](https://github.com/waktia)
--[RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
+- [Shuttleblo](https://github.com/shuttleblo) 学べば学ぶほど、経営者になりたくなる新卒
+- [Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒
+- [Wakita](https://github.com/waktia)
+- [RINA](https://github.com/Rinasham) 最近の趣味は大逆転裁判の英語版をやること
 
 ## 機能
+- ログイン・新規ユーザー登録機能
+- Google認証
+- クイズ機能(問題数選択可/ランダム表示)
+- 正解/不正解を表示する結果画面
+- 音声APIによる発音
+
 ## 動作保証環境
 ```
 Python 3.9.6
@@ -37,3 +43,7 @@ Django 3.2.6
 - Python
 - Django
 - Bootstrap
+- ajax
+- jQuery
+- SQLite3
+
