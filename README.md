@@ -22,7 +22,7 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 
 ## 開発メンバー
 -[Shuttleblo](https://github.com/shuttleblo)
--[Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒
+-[Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒<br>
 -[Wakita](https://github.com/waktia)
 -[RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
 
