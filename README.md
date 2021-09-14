@@ -24,7 +24,7 @@ Created by ハッカソンチーム Dango  at  [RareTech](https://raretech.site/
 - [Shuttleblo](https://github.com/shuttleblo)
 - [Daichi](https://github.com/daichi0918) お金をもらいながら学べることに日々充実感がある新卒
 - [Wakita](https://github.com/waktia)
-- [RINA](https://github.com/Rinasham) ロックダウンで引きこもり生活も飽きてきたアラサー
+- [RINA](https://github.com/Rinasham) 最近の趣味は大逆転裁判の英語版をやること
 
 ## 機能
 - ログイン・新規ユーザー登録機能
