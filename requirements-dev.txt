@@ -10,6 +10,7 @@ Django==3.2.6
 django-allauth==0.45.0
 django-bootstrap-v5==1.0.5
 django-bootstrap5==2.1.2
+django-environ==0.7.0
 flake8==3.9.2
 idna==3.2
 mccabe==0.6.1
