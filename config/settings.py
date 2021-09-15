@@ -11,20 +11,25 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import environ
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-try:
-    from .local_secret_settings import *
-except ImportError:
-    pass
+# try:
+#     from .local_secret_settings import *
+# except ImportError:
+#     pass
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = env('DEBUG')
 
 
 # Application definition
