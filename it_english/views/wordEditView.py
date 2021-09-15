@@ -59,5 +59,3 @@ def quiz(request):
             'quizzes':quizzes
         }
         return render(request, 'quiz/quiz.html', context)
-
-
